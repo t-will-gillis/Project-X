@@ -13,6 +13,6 @@ jobs:
   check-staleness:
     runs-on: ubuntu-latest
     steps:
-      - uses: t-will-gillis/maintenance-actions/add-update-label-weekly@vmain
+      - uses: t-will-gillis/maintenance-actions/add-update-label-weekly@main
         with:
           github-token: ${{ secrets.MY_TOKEN }}
