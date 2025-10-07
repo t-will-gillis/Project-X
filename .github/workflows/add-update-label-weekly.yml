@@ -15,4 +15,4 @@ jobs:
     steps:
       - uses: t-will-gillis/maintenance-actions/add-update-label-weekly@main
         with:
-          github-token: ${{ secrets.MY_TOKEN }}
+          github-token: ${{ secrets.UPDATE_LABEL }}
