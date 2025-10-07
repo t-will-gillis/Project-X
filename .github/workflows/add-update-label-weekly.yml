@@ -10,7 +10,7 @@ permissions:
   issues: read
 
 jobs:
-  check-staleness:
+  Check-issues-for-updates:
     runs-on: ubuntu-latest
     steps:
       - uses: t-will-gillis/maintenance-actions/add-update-label-weekly@v0
