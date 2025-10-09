@@ -1,5 +1,4 @@
 labels:
-  2WeeksInactive:""
   complexity0:""
   complexity1:""
   complexity2:""
@@ -32,6 +31,7 @@ labels:
   sizeMissing:""
   skillsIssueCompleted:""
   statusHelpWanted:""
+  statusInactive0:""
   statusInactive1:""
   statusUnassignedByBot:""
   statusUpdated:""
