@@ -7,9 +7,9 @@
 # ==============================================================================
 timeframes:
   
-  updatedByDays: 3     # Issues updated within this many days are considered current
-  commentByDays: 3     # Issues not updated for this many days are prompted for an update
-  inactiveByDays: 14   # Issues not updated for this many days are marked as inactive
+  updatedByDays: 1     # Issues updated within this many days are considered current
+  commentByDays: 2     # Issues not updated for this many days are prompted for an update
+  inactiveByDays: 3    # Issues not updated for this many days are marked as inactive
   upperLimitDays: 35   # To reduce issue clutter, a GraphQL mutation minimizes repetitive 
                        #   bot comments by default. Bot comments older than this are not 
                        #   included to avoid GitHub rate limiting (and they should have 
