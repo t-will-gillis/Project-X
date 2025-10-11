@@ -14,9 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - name: List maintenance-actions folder
-        run: ls -R .github/maintenance-actions
-
       - uses: t-will-gillis/maintenance-actions/add-update-label-weekly@v0
         with:
           github-token: ${{ secrets.UPDATE_LABEL }}
