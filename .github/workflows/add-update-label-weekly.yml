@@ -13,6 +13,7 @@ jobs:
   Check-issues-for-updates:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v5
       - name: List maintenance-actions folder
         run: ls -R .github/maintenance-actions
 
