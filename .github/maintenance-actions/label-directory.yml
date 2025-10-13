@@ -70,7 +70,7 @@ size025pt: "size: 0.25pt"
 size05pt: "size: 0.5pt"
 sizeMissing: "size: missing"
 statusUpdated: "Status: Updated"
-statusInactive1: To Update !
+statusInactive1: "To Update !"
 statusInactive2: "2 weeks inactive"
 statusHelpWanted: "Status: Help Wanted"
 skillsIssueCompleted: "Skills Issue Completed"
