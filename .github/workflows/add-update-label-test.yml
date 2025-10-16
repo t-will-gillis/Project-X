@@ -35,9 +35,9 @@ jobs:
             fi
           }
       
-          download_if_missing "add-update-label-weekly.example.yml" ".github/workflows/add-update-label-weekly.yml"
-          download_if_missing "add-update-label-weekly-config.example.yml" ".github/maintenance-actions/add-update-label-weekly-config.yml"
-          download_if_missing "label-directory.example.yml" ".github/maintenance-actions/label-directory.yml"
+          download_if_missing "add-update-label-weekly.example.yml" ".github/workflows/add-update-label-weekly-TEST.yml"
+          download_if_missing "add-update-label-weekly-config.example.yml" ".github/maintenance-actions/add-update-label-weekly-config-TEST.yml"
+          download_if_missing "label-directory.example.yml" ".github/maintenance-actions/label-directory-TEST.yml"
 
       - name: Commit installed files
         uses: stefanzweifel/git-auto-commit-action@v6.0.1
