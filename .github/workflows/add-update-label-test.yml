@@ -49,3 +49,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Install Add Update Label Weekly files"
+          commit_user_name: "github-actions[bot]"
+          # Use PAT for authentication instead of default GITHUB_TOKEN
+          token: ${{ secrets.INSTALL_WORKFLOW }}
+
