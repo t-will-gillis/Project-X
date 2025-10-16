@@ -40,7 +40,7 @@ jobs:
           download_if_missing "label-directory.example.yml" ".github/maintenance-actions/label-directory.yml"
 
       - name: Commit installed files
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v6.0.1
         with:
           commit_message: "Install Add Update Label Weekly files
 
