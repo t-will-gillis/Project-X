@@ -1,0 +1,51 @@
+name: Install "Add Update Label Weekly"
+
+on:
+  workflow_dispatch:
+
+# Set default permissions
+permissions:
+  contents: write
+  actions: none
+  checks: none
+  deployments: none
+  issues: none
+  discussions: none
+  packages: none
+  pull-requests: none
+  repository-projects: none
+  security-events: none
+  statuses: none
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+        
+      # BASE path needs edit
+      - name: Download example configs if not present
+        run: |
+          set -euo pipefail
+          BASE="https://github.com/t-will-gillis/maintenance-actions/example-configs"
+
+          install_if_missing() {
+            local src="$1"; local dest="$2"
+            mkdir -p "$(dirname "$dest")"
+            if [ ! -f "$dest" ]; then
+              echo "Installing $dest"
+              curl -L "$BASE/$src" -o "$dest"
+            else
+              echo "Skipping $dest (already exists)"
+            fi
+          }
+
+          install_if_missing "add-update-label-weekly.example.yml" ".github/workflows/add-update-label-weekly-test.yml"
+          install_if_missing "add-update-label-weekly-config.example.yml" ".github/maintenance-actions/add-update-label-weekly-test-config.yml"
+          install_if_missing "label-directory.example.yml" ".github/maintenance-actions/label-directory-test.yml"
+
+      - name: Commit installed files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Install Add Update Label Weekly files"
