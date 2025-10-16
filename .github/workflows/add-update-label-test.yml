@@ -20,7 +20,7 @@ jobs:
       - name: Download example configs if not present
         run: |
           set -euo pipefail
-          BASE="https://github.com/t-will-gillis/maintenance-actions/example-configs"
+          BASE="https://github.com/t-will-gillis/maintenance-actions/tree/second-iteration/example-configs"
 
           install_if_missing() {
             local src="$1"; local dest="$2"
