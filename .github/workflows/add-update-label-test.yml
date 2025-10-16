@@ -6,16 +6,6 @@ on:
 # Set default permissions
 permissions:
   contents: write
-  actions: none
-  checks: none
-  deployments: none
-  issues: none
-  discussions: none
-  packages: none
-  pull-requests: none
-  repository-projects: none
-  security-events: none
-  statuses: none
 
 jobs:
   install:
@@ -23,6 +13,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.INSTALL_WORKFLOW }}
         
       # BASE path needs edit
       - name: Download example configs if not present
@@ -50,6 +42,5 @@ jobs:
         with:
           commit_message: "Install Add Update Label Weekly files"
           commit_user_name: "github-actions[bot]"
-          # Use PAT for authentication instead of default GITHUB_TOKEN
-          token: ${{ secrets.INSTALL_WORKFLOW }}
+
 
