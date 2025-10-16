@@ -16,26 +16,28 @@ jobs:
         with:
           token: ${{ secrets.INSTALL_WORKFLOW }}
         
-      # BASE path needs edit
       - name: Download example configs if not present
         run: |
           set -euo pipefail
-          BASE="https://github.com/t-will-gillis/maintenance-actions/tree/second-iteration/example-configs"
-
-          install_if_missing() {
-            local src="$1"; local dest="$2"
+          
+          # Base URL for remote files
+          REMOTE_BASE="https://github.com/t-will-gillis/maintenance-actions/raw/second-iteration/example-configs"
+      
+          download_if_missing() {
+            local src="$1"
+            local dest="$2"
             mkdir -p "$(dirname "$dest")"
             if [ ! -f "$dest" ]; then
-              echo "Installing $dest"
-              curl -L "$BASE/$src" -o "$dest"
+              echo "Downloading $src → $dest"
+              curl -L "$REMOTE_BASE/$src" -o "$dest"
             else
               echo "Skipping $dest (already exists)"
             fi
           }
-
-          install_if_missing "add-update-label-weekly.example.yml" ".github/workflows/add-update-label-weekly-test.yml"
-          install_if_missing "add-update-label-weekly-config.example.yml" ".github/maintenance-actions/add-update-label-weekly-test-config.yml"
-          install_if_missing "label-directory.example.yml" ".github/maintenance-actions/label-directory-test.yml"
+      
+          download_if_missing "add-update-label-weekly.example.yml" ".github/workflows/add-update-label-weekly.yml"
+          download_if_missing "add-update-label-weekly-config.example.yml" ".github/maintenance-actions/add-update-label-weekly-config.yml"
+          download_if_missing "label-directory.example.yml" ".github/maintenance-actions/label-directory.yml"
 
       - name: Commit installed files
         uses: stefanzweifel/git-auto-commit-action@v5
