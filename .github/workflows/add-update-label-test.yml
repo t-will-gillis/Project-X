@@ -36,7 +36,7 @@ jobs:
           }
       
           download_if_missing "add-update-label-weekly.example.yml" ".github/workflows/add-update-label-weekly-TEST.yml"
-          download_if_missing "add-update-label-weekly-config.example.yml" ".github/maintenance-actions/add-update-label-weekly-config-TEST.yml"
+          download_if_missing "add-update-label-config.example.yml" ".github/maintenance-actions/add-update-label-weekly-config-TEST.yml"
           download_if_missing "label-directory.example.yml" ".github/maintenance-actions/label-directory-TEST.yml"
 
       - name: Commit installed files
