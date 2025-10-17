@@ -6,11 +6,12 @@ on:
   workflow_dispatch:
     inputs:
       dry-run:
-        description: 'Run the action in dry-run mode (no changes will be made)' 
+        description: 'Run in dry-run mode (will not post comments or update issues)'
         type: choice
         options:
           - 'true'
           - 'false'
+        default: 'false'
 
 permissions:
   contents: read
