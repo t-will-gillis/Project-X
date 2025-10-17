@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       dry-run:
-        description: 'Run in dry-run mode (will not post comments or update issues)'
+        description: 'Run in dry-run mode without posting comments or updating issues'
         type: choice
         options:
           - 'true'
