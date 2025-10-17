@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       dry-run:
+        description: 'Run the action in dry-run mode (no changes will be made)' 
         type: choice
         options:
           - 'true'
