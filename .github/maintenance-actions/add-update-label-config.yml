@@ -23,7 +23,7 @@ timeframes:
 # ==============================================================================
 projectBoard:
   # Issues with this Project Board status are included in the automation that checks 
-  # whether assiginees are updating their issues.  
+  # whether assignees are updating their issues.  
   # CUSTOMIZE this to match your equivalent Project Board status.
   targetStatus: "In progress (actively working)"
   
