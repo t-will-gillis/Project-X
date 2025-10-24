@@ -84,7 +84,7 @@ labels:
   #
   # You may add or remove label keys to this list as needed
 
-  exclude:
+  optional:
     - draft
     - er
     - epic
