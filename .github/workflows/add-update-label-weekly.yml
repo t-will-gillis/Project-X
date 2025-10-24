@@ -22,6 +22,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - uses: t-will-gillis/maintenance-actions/add-update-label-weekly@v0.5.10
+      - uses: t-will-gillis/maintenance-actions/add-update-label-weekly@v0.5.11
         with:
           github-token: ${{ secrets.INSTALL_WORKFLOW }}
