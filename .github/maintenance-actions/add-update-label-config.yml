@@ -126,6 +126,9 @@ bots:
 #   ${cutoffTime}         - The formatted timestamp of the issue's last update
 #
 # You can use Markdown formatting to edit this template
+
+teamSlackChannel: \#hfla-site
+
 commentTemplate: |
   Hello ${assignees}!
   
