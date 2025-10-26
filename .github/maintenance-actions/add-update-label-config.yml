@@ -127,7 +127,7 @@ bots:
 #
 # You can use Markdown formatting to edit this template
 
-teamSlackChannel: \#hfla-site
+teamSlackChannel: "#hfla-site"
 
 commentTemplate: |
   Hello ${assignees}!
