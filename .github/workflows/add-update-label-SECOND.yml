@@ -9,9 +9,9 @@ on:
         description: 'Run in dry-run mode without posting comments or updating issues'
         type: choice
         options:
-          - 'True'
-          - 'False'
-        default: 'False'
+          - 'true'
+          - 'false'
+        default: 'true'
 
 # Default token permissions
 permissions:
@@ -27,4 +27,4 @@ jobs:
       - uses: t-will-gillis/automate-the-org/add-update-label-weekly@v0.1.4
         with:
           github-token: ${{ secrets.INSTALL_WORKFLOW }}   # CUSTOMIZE: Change to your project secret / token
-          dry-run: ${{ github.event.inputs.dry-run || 'false' }}
+          dry-run: ${{ github.event.inputs.dry-run || 'true' }}
