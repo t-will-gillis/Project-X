@@ -27,5 +27,6 @@ jobs:
       - uses: t-will-gillis/automate-the-org/add-update-label-weekly@v0.3.2
                   
         with:
-          github-token: ${{ secrets.HFLA_GRAPHQL_TOKEN }}   # CUSTOMIZE: Change to your project secret / token
+          github-token: ${{ secrets.INSTALL_WORKFLOW }}   # CUSTOMIZE: Change to your project secret / token
+     
           dry-run: ${{ github.event.inputs.dry-run || 'true' }}
