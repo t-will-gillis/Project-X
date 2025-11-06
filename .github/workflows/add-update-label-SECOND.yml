@@ -24,7 +24,7 @@ jobs:
     if: github.repository == 't-will-gillis/Project-X'   # CUSTOMIZE: Change to your project repo name
     steps:
       - uses: actions/checkout@v5
-      - uses: t-will-gillis/automate-the-org/add-update-label-weekly@v0.3.4        
+      - uses: t-will-gillis/automate-the-org/add-update-label-weekly@v0.3.5       
         with:
           github-token: ${{ secrets.INSTALL_WORKFLOW }}   # CUSTOMIZE: Change to your project secret / token
           dry-run: ${{ github.event.inputs.dry-run || 'true' }}
